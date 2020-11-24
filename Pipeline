@@ -1,0 +1,31 @@
+pipeline
+{
+    agent
+    {
+        label 'slave'
+    }
+    stages
+    {
+        stage('check for java version')
+        {
+            steps
+            {
+                sh 'sudo java --version'
+            }
+        }
+        stage('check for tomcat')
+        {
+            steps
+            {
+                sh 'systemctl status tomcat'
+            }
+        }
+        stage('print echo')
+        {
+            steps
+            {
+                echo "hello sriram"
+            }
+        }
+    }
+}
