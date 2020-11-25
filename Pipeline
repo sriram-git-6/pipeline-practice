@@ -2,7 +2,7 @@ pipeline
 {
     agent
     {
-        label 'slave'
+        label 'slave1'
     }
     stages
     {
@@ -11,6 +11,7 @@ pipeline
             steps
             {
                 sh 'sudo java --version'
+                
             }
         }
         stage('check for tomcat')
