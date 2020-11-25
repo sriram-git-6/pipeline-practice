@@ -6,6 +6,13 @@ pipeline
     }
     stages
     {
+        stage ('cd')
+        {
+            steps
+            {
+                git 'https://github.com/sriram-git-6/pipeline-practice.git'
+            }
+        }
         stage('check for java version')
         {
             steps
