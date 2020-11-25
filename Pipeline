@@ -10,7 +10,7 @@ pipeline
         {
             steps
             {
-                sh 'sudo java --version'
+                sh 'sudo java -version'
                 
             }
         }
@@ -18,7 +18,7 @@ pipeline
         {
             steps
             {
-                sh 'systemctl status tomcat'
+                sh ' sudo systemctl status tomcat'
             }
         }
         stage('print echo')
